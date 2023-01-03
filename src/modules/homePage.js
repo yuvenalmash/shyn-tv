@@ -6,7 +6,7 @@ const createCard = async (showID) => {
     <div class="card">
       <img src="${show.image.medium}" alt="${show.name}">
       <p>${show.name}</p>
-      <div><i class="fa-solid fa-heart fa-lg"></i>6 likes</div>
+      <div><i class="fa-solid fa-heart fa-lg"></i> 5 likes</div>
       <button class="btn">Comments</button>
       <button class="btn">Reservations</button>
     </div>
