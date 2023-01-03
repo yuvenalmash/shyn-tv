@@ -1,7 +1,7 @@
 // import './style.css';
 
-function sum(a, b) {
+export const sum = (a, b) =>{
     return a + b;
   }
 
-export sum;
+console.log(sum(5,2));
