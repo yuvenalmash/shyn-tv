@@ -2,3 +2,10 @@
   padding: 0;
   margin: 0;
 }
+
+#commentPopup {
+  display: flex;
+  position: absolute;
+  color: blue;
+  height: fit-content;
+}
