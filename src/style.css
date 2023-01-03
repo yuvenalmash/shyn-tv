@@ -41,6 +41,11 @@ li {
   align-items: center;
 }
 
+img,
+p {
+  padding: 5px;
+}
+
 button {
   background-color: white;
   box-shadow: 3px 3px;
@@ -51,7 +56,7 @@ button {
 }
 
 footer {
-  border-top: 3px solid black;
+  border-top: 2px solid black;
 }
 
 footer p {
