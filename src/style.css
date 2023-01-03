@@ -6,6 +6,26 @@
   font-size: large;
 }
 
+ul.header-items {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 3rem;
+  align-items: baseline;
+}
+
+li {
+  padding: 10px;
+  list-style: none;
+}
+
+.logo {
+  font-size: xx-large;
+}
+
+.featured {
+  text-decoration: underline;
+}
+
 .cards {
   display: flex;
   flex-wrap: wrap;
@@ -30,10 +50,10 @@ button {
   margin: 5px;
 }
 
-/* .btn:hover {
-  background-color: rgb(221, 221, 221);
+footer {
+  border-top: 3px solid black;
 }
 
-.btn:active {
-  background-color: rgb(155, 153, 153);
-} */
+footer p {
+  padding: 2rem;
+}
