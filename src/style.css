@@ -1,11 +1,39 @@
 * {
   padding: 0;
   margin: 0;
+  box-sizing: border-box;
+  font-family: monospace;
+  font-size: large;
 }
 
-#commentPopup {
+.cards {
   display: flex;
-  position: absolute;
-  color: blue;
-  height: fit-content;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 10rem;
+  margin: 3rem;
 }
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+button {
+  background-color: white;
+  box-shadow: 3px 3px;
+  padding: 2.5px 10px;
+  transition: all 300ms linear;
+  width: fit-content;
+  margin: 5px;
+}
+
+/* .btn:hover {
+  background-color: rgb(221, 221, 221);
+}
+
+.btn:active {
+  background-color: rgb(155, 153, 153);
+} */
