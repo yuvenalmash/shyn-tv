@@ -3,7 +3,6 @@ import { getComments } from './involvementAPI.js';
 
 export const listComments = async (showId) => {
   const data = await getComments(showId);
-  console.log(data);
   const ul = document.getElementById('commentsList');
   data.forEach(async (el) => {
     const li = document.createElement('li');

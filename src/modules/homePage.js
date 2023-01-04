@@ -32,9 +32,7 @@ export const listShows = async () => {
 
 export const addLikes = async (showId) => {
   const likesList = await getLikes();
-  console.log(likesList);
   const showLikes = likesList.filter((element) => element.item_id === `${showId}`);
-  console.log(showLikes[0].likes);
   const parent = document.getElementById(`${showId}likes`);
   parent.innerHTML = `${showLikes[0].likes} likes`;
 };

@@ -1,10 +1,11 @@
 const baseURL = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/';
 
 const appId = 'qS1d1JsU58cIKClC8bN0/';
+// const appId = 'm4yoGSf3f0o5jjuL4DT4/';
 
 // Likes
-export const addLike = async (showId) => {
-  const response = await fetch(`${baseURL}apps/${appId}likes`, {
+export const postLike = async (showId) => {
+  await fetch(`${baseURL}apps/${appId}likes`, {
     method: 'POST',
     body: JSON.stringify({
       item_id: `${showId}`,
@@ -13,8 +14,6 @@ export const addLike = async (showId) => {
       'Content-type': 'application/json; charset=UTF-8',
     },
   });
-  const responseData = await response.json();
-  return responseData;
 };
 
 export const getLikes = async () => {
