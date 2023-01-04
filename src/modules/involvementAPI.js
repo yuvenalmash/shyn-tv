@@ -4,7 +4,7 @@ const appId = 'qS1d1JsU58cIKClC8bN0/';
 
 // Likes
 export const addLike = async (showId) => {
-  const response = await fetch(`${baseURL}/apps/${appId}/likes`, {
+  const response = await fetch(`${baseURL}apps/${appId}likes`, {
     method: 'POST',
     body: JSON.stringify({
       item_id: `${showId}`,
@@ -18,14 +18,14 @@ export const addLike = async (showId) => {
 };
 
 export const getLikes = async () => {
-  const response = await fetch(`${baseURL}/apps/${appId}/likes`);
+  const response = await fetch(`${baseURL}apps/${appId}likes`);
   const responseData = await response.json();
   return responseData;
 };
 
 // comments
 export const postComment = async (showId, userName, comment) => {
-  const response = await fetch(`${baseURL}/apps/${appId}/comments`, {
+  const response = await fetch(`${baseURL}apps/${appId}comments`, {
     method: 'POST',
     body: JSON.stringify({
       item_id: `${showId}`,
@@ -40,8 +40,8 @@ export const postComment = async (showId, userName, comment) => {
   return responseData;
 };
 
-export const getComment = async (showId) => {
-  const response = await fetch(`${baseURL}/apps/${appId}/comments?item_id=${showId}`);
+export const getComments = async (showId) => {
+  const response = await fetch(`${baseURL}apps/${appId}comments?item_id=${showId}`);
   const responseData = await response.json();
   return responseData;
 };
