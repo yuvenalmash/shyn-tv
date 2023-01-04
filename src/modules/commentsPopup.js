@@ -1,6 +1,18 @@
 import getShow from './tvmazeAPI.js';
 import { getComments } from './involvementAPI.js';
 
+export const listComments = async (showId) => {
+  const data = await getComments(showId);
+  console.log(data);
+  const ul = document.getElementById('commentsList');
+  data.forEach(async (el) => {
+    const li = document.createElement('li');
+    const listItem = `${el.creation_date} ${el.username} ${el.comment}`;
+    li.appendChild(document.createTextNode(listItem));
+    ul.appendChild(li);
+  });
+};
+
 export const createCommentPopup = async (showId) => {
   const tvShow = await getShow(showId);
   const popup = `
@@ -18,18 +30,5 @@ export const createCommentPopup = async (showId) => {
   const parent = document.getElementById('commentPopup');
   parent.innerHTML = popup;
   parent.style.display = 'block';
-  listComments(showId)
+  listComments(showId);
 };
-
-export const listComments = async (showId) =>{
-  const data = await getComments(showId)
-  console.log(data)
-  let ul = document.getElementById("commentsList")
-  data.forEach(async (el) => {
-    const li = document.createElement('li')
-    const listItem = `${el.creation_date} ${el.username} ${el.comment}`
-    li.appendChild(document.createTextNode(listItem))
-    ul.appendChild(li);
-  });
-}
-
