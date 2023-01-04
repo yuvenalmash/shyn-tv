@@ -1,7 +1,6 @@
 import "./style.css";
-import { createCommentPopup } from "./modules/commentsPopup.js";
 import { listShows } from "./modules/homePage";
-
-
+import { createCommentPopup } from "./modules/commentsPopup.js";
 
 listShows()
+window.createCommentPopup = createCommentPopup

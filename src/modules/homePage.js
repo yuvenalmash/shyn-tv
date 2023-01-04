@@ -1,12 +1,13 @@
 import { getShow } from "./tvmazeAPI.js";
+// import { createCommentPopup } from "./commentsPopup.js";
 
 const createCard = async (showID) => {
   const show = await getShow(showID);
   const card = `
-    <div class="card">
+    <div class="card" id ="${show.id}">
       <img src="${show.image.medium}" alt="show image">
       <p>${show.name}</p>
-      <button>Comments</button>
+      <button onclick="createCommentPopup(${showID})">Comments</button>
       <button>Reservations</button>
     </div>
   `;

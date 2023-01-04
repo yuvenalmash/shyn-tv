@@ -4,8 +4,14 @@
 }
 
 #commentPopup {
-  display: flex;
+  display: none;
   position: absolute;
-  color: blue;
-  height: fit-content;
+  justify-content: center;
+  backdrop-filter: blur(7px);
+  width: 100vw;
+  height: 100vh;
+}
+
+.popupImg {
+  height: 70vh;
 }
