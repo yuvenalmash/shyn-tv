@@ -9,7 +9,7 @@ export const createCommentPopup = async (showId) => {
     <h2>${tvShow.name}</h2>
     <p>${tvShow.genres}</p>
     <h3>Comments</h3>
-    <ul id="commentslist"></ul>
+    <ul id="commentsList"></ul>
     <h3>Add a comment<h3>
     <input id="userName" type="text" placeholder="Your name">
     <input id="comment" type="text" placeholder="Your insights">
@@ -24,10 +24,11 @@ export const createCommentPopup = async (showId) => {
 export const listComments = async (showId) =>{
   const data = await getComments(showId)
   console.log(data)
-  const ul = document.getElementById("commentsList")
-  data.forEach(element => {
+  let ul = document.getElementById("commentsList")
+  data.forEach(async (el) => {
     const li = document.createElement('li')
-    li.appendChild(document.createTextNode(element))
+    const listItem = `${el.creation_date} ${el.username} ${el.comment}`
+    li.appendChild(document.createTextNode(listItem))
     ul.appendChild(li);
   });
 }

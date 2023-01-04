@@ -6,8 +6,10 @@ import { postComment } from './modules/involvementAPI.js';
 const handlePostComment = async(showId) =>{
   const userName = document.getElementById("userName").value;
   const comment = document.getElementById("comment").value;
-  await postComment(showId,userName,comment)
-  listComments(showId)
+  if (userName !== '' && comment !== ''){
+    await postComment(showId,userName,comment)
+    listComments(showId)
+  }
 }
 
 
