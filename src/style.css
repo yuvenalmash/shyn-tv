@@ -66,3 +66,16 @@ footer {
 footer p {
   padding: 2rem;
 }
+
+#commentPopup {
+  display: none;
+  position: absolute;
+  justify-content: center;
+  backdrop-filter: blur(7px);
+  width: 100vw;
+  height: 100vh;
+}
+
+.popupImg {
+  height: 70vh;
+}
