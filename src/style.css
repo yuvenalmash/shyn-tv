@@ -18,8 +18,11 @@ li {
   list-style: none;
 }
 
-.logo {
-  font-size: xx-large;
+.logo-div {
+  display: flex;
+  flex-direction: column;
+  font-size: 18px;
+  align-items: center;
 }
 
 .featured {
