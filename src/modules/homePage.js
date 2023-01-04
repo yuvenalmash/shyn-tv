@@ -1,4 +1,3 @@
-
 import getShow from './tvmazeAPI.js';
 
 const createCard = async (showID) => {
