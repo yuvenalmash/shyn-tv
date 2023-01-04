@@ -115,17 +115,37 @@ eval("\n\n/* istanbul ignore next  */\nfunction styleTagTransform(css, styleElem
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.css */ \"./src/style.css\");\n/* harmony import */ var _modules_comments_popup_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/comments-popup.js */ \"./src/modules/comments-popup.js\");\n\n\ndocument.getElementById('commentBtn', (0,_modules_comments_popup_js__WEBPACK_IMPORTED_MODULE_1__.createCommentPopup)())\n\n//# sourceURL=webpack://webpack-demo/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.css */ \"./src/style.css\");\n/* harmony import */ var _modules_commentsPopup_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/commentsPopup.js */ \"./src/modules/commentsPopup.js\");\n/* harmony import */ var _modules_homePage__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/homePage */ \"./src/modules/homePage.js\");\n\n\n\n\n\n\n(0,_modules_homePage__WEBPACK_IMPORTED_MODULE_2__.listShows)()\n\n\n//# sourceURL=webpack://webpack-demo/./src/index.js?");
 
 /***/ }),
 
-/***/ "./src/modules/comments-popup.js":
-/*!***************************************!*\
-  !*** ./src/modules/comments-popup.js ***!
-  \***************************************/
+/***/ "./src/modules/commentsPopup.js":
+/*!**************************************!*\
+  !*** ./src/modules/commentsPopup.js ***!
+  \**************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"createCommentPopup\": () => (/* binding */ createCommentPopup)\n/* harmony export */ });\nconst createCommentPopup = () =>{\n  const popup = document.createElement('div')\n  popup.setAttribute('id', 'commentPopup')\n  const child = `\n    <p>xoxoxoxo<p>\n    `\n  popup.appendChild(child)\n  console.log('Commentpopup')\n}\n\n//# sourceURL=webpack://webpack-demo/./src/modules/comments-popup.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"createCommentPopup\": () => (/* binding */ createCommentPopup)\n/* harmony export */ });\nconst createCommentPopup = (showID) => {\n  const popup = `\n    <div>\n      <p>Hello world!</p>\n    </div>\n  `\n  const parent = document.getElementById('commentPopup');\n  parent.innerHTML = popup;\n};\n\n\n//# sourceURL=webpack://webpack-demo/./src/modules/commentsPopup.js?");
+
+/***/ }),
+
+/***/ "./src/modules/homePage.js":
+/*!*********************************!*\
+  !*** ./src/modules/homePage.js ***!
+  \*********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"listShows\": () => (/* binding */ listShows)\n/* harmony export */ });\n/* harmony import */ var _tvmazeAPI_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./tvmazeAPI.js */ \"./src/modules/tvmazeAPI.js\");\n/* harmony import */ var _commentsPopup_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./commentsPopup.js */ \"./src/modules/commentsPopup.js\");\n\n\n\nconst createCard = async (showID) => {\n  const show = await (0,_tvmazeAPI_js__WEBPACK_IMPORTED_MODULE_0__.getShow)(showID);\n  const card = `\n    <div class=\"card\" id =\"${show.id}\">\n      <img src=\"${show.image.medium}\" alt=\"show image\">\n      <p>${show.name}</p>\n      <button onclick=\"${console.log(show.id)}\">Comments</button>\n      <button>Reservations</button>\n    </div>\n  `;\n  return card\n};\n\nconst listShows = () =>{\n  const showIDs = [169, 82]\n  showIDs.forEach (async(element) => {\n    const card = await createCard(element)\n    const parent = document.getElementById(\"cards\")\n    parent.innerHTML += card\n  });\n}\n\n//# sourceURL=webpack://webpack-demo/./src/modules/homePage.js?");
+
+/***/ }),
+
+/***/ "./src/modules/tvmazeAPI.js":
+/*!**********************************!*\
+  !*** ./src/modules/tvmazeAPI.js ***!
+  \**********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"getShow\": () => (/* binding */ getShow)\n/* harmony export */ });\nconst baseURL = 'https://api.tvmaze.com/shows/'\n\nconst getShow = async (showID)=>{\n  const response = await fetch(`${baseURL}${showID}`);\n  const responseData = await response.json();\n  return responseData\n}\n\n\n//# sourceURL=webpack://webpack-demo/./src/modules/tvmazeAPI.js?");
 
 /***/ })
 
