@@ -1,4 +1,4 @@
-import { getShow } from './tvmazeAPI.js';
+import getShow from './tvmazeAPI.js';
 
 const createCard = async (showID) => {
   const show = await getShow(showID);
@@ -6,7 +6,7 @@ const createCard = async (showID) => {
     <div class="card">
       <img src="${show.image.medium}" alt="${show.name}">
       <p>${show.name}</p>
-      <div><i class="fa-solid fa-heart fa-lg"></i> 5 likes</div>
+      <div><i class="fa-solid fa-heart fa-lg"></i>  likes</div>
       <button class="btn">Comments</button>
       <button class="btn">Reservations</button>
     </div>
@@ -14,7 +14,7 @@ const createCard = async (showID) => {
   return card;
 };
 
-export const listShows = () => {
+const listShows = () => {
   const showIDs = [169, 82, 44, 35, 98, 25];
   showIDs.forEach(async (element) => {
     const card = await createCard(element);
@@ -22,3 +22,5 @@ export const listShows = () => {
     parent.innerHTML += card;
   });
 };
+
+export default listShows;

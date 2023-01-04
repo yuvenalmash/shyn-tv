@@ -1,4 +1,4 @@
 import './style.css';
-import { listShows } from './modules/homePage';
+import listShows from './modules/homePage.js';
 
 listShows();
