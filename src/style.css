@@ -69,13 +69,47 @@ footer p {
 
 #commentPopup {
   display: none;
-  position: absolute;
+  position: fixed;
   justify-content: center;
-  backdrop-filter: blur(7px);
+  backdrop-filter: blur(10px);
   width: 100vw;
   height: 100vh;
+  padding: 10px;
+  margin-top: -60rem;
+}
+
+#popup {
+  max-height: 100%;
+  max-width: 90%;
+  overflow-y: scroll;
+  background-color: #f4f4f4;
+  width: 85%;
+  padding-top: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .popupImg {
-  height: 70vh;
+  height: 60vh;
+}
+
+#close {
+  position: absolute;
+  padding-left: 75%;
+}
+
+.hide {
+  display: none;
+}
+
+input#comment {
+  padding-bottom: 2rem;
+  margin-top: 5px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
 }

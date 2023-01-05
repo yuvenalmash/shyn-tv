@@ -26,17 +26,26 @@ export const createCommentPopup = async (showId) => {
   const popup = `
   <div id="popup">
     <img class="popupImg" src="${tvShow.image.original}" alt="tvShow image">
+    <i class="fa fa-times fa-2x" aria-hidden="true" id="close"></i>
     <h2>${tvShow.name}</h2>
     <p>${tvShow.genres}</p>
     <h3>Comments (${counter})</h3>
     <ul id="commentsList"></ul>
     <h3>Add a comment<h3>
-    <input id="userName" type="text" placeholder="Your name">
-    <input id="comment" type="text" placeholder="Your insights">
-    <button onclick="handlePostComment(${showId})">Comment</button>
+    <form action="">
+      <input id="userName" type="text" placeholder="Your name">
+      <input id="comment" type="text" placeholder="Your insights">
+      <button onclick="handlePostComment(${showId})">Comment</button>
+    </form>
   </div>`;
   const parent = document.getElementById('commentPopup');
   parent.innerHTML = popup;
-  parent.style.display = 'block';
+  parent.style.display = 'flex';
   listComments(comments);
+
+  const closeBtn = document.querySelector('#close');
+
+  closeBtn.addEventListener('click', () => {
+    parent.style.display = 'none';
+  });
 };
