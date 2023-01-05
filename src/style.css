@@ -37,7 +37,7 @@ li {
 nav {
   border-bottom: 2px solid #74f0ed;
   box-shadow: 0 5px 5px #a8fd16;
-  background: url('./assets/pattern_bg.png') repeat rgba(0, 0, 0, 0.836) ;
+  background: url('./assets/pattern_bg.png') repeat rgba(0, 0, 0, 0.836);
 }
 
 .cards {
@@ -53,15 +53,13 @@ nav {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #3838387e;
   font-size: 20px;
   border: 2px solid #74f0ed;
   box-shadow: 0 5px 10px #66fdfb;
-  min-width: fit-content;
-  width: 20%;
+  max-width: 20%;
   height: 370px;
   gap: 4px;
-  background: url('./assets/pattern_bg.png') repeat rgba(39, 39, 39, 0.644) ;
+  background: url('./assets/pattern_bg.png') repeat rgba(39, 39, 39, 0.644);
 }
 
 .card section {
@@ -69,7 +67,6 @@ nav {
   flex-direction: column;
   align-items: center;
   width: 250px;
-  align-items: center;
 }
 
 .card div {
@@ -99,7 +96,7 @@ button {
   margin: 5px;
 }
 
-button:hover{
+button:hover {
   background-color: #ea445a;
 }
 
@@ -107,7 +104,7 @@ footer {
   border-top: 2px solid #74f0ed;
   box-shadow: 0 0 5px #66fdfb;
   margin-top: 9rem;
-  background: url('./assets/pattern_bg.png') repeat #000 ;
+  background: url('./assets/pattern_bg.png') repeat #000;
 }
 
 footer p {
@@ -120,13 +117,13 @@ footer p {
   overflow-y: scroll;
   justify-content: center;
   width: 90%;
-  height: fit-content;
   margin: 30px 50px;
+
   /* margin-top: -20rem; */
 }
 
 #popup {
-  position:fixed;
+  position: fixed;
   max-height: 100%;
   max-width: 90%;
   overflow-y: scroll;

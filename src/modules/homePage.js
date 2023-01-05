@@ -22,7 +22,7 @@ export const featuredShowsCounter = (featuredList) => {
 };
 
 export const listShows = async () => {
-  const showIDs = [172, 618, 66, 143, 35, 98, 25,2,4,13, 61,69];
+  const showIDs = [172, 618, 66, 143, 35, 98, 25, 2, 4, 13, 61, 69];
   const likesList = await getLikes();
   const parent = document.getElementById('cards');
   showIDs.forEach(async (showId) => {
