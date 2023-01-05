@@ -12,15 +12,15 @@ export const listComments = async (showId) => {
   });
 };
 
-const commentCounter = async (showId) =>{
+const commentCounter = async (showId) => {
   const data = await getComments(showId);
-  const counter = data.length
-  return counter
-}
+  const counter = data.length;
+  return counter;
+};
 
 export const createCommentPopup = async (showId) => {
   const tvShow = await getShow(showId);
-  const counter = await commentCounter(showId)
+  const counter = await commentCounter(showId);
   const popup = `
   <div id="popup">
     <img class="popupImg" src="${tvShow.image.original}" alt="tvShow image">
