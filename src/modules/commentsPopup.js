@@ -3,12 +3,14 @@ import { getComments } from './involvementAPI.js';
 
 export const listComments = (comments) => {
   const ul = document.getElementById('commentsList');
-  comments.forEach((el) => {
-    const li = document.createElement('li');
-    const listItem = `${el.creation_date} ${el.username} ${el.comment}`;
-    li.appendChild(document.createTextNode(listItem));
-    ul.appendChild(li);
-  });
+  if (comments.error.status !== 400) {
+    comments.forEach((el) => {
+      const li = document.createElement('li');
+      const listItem = `${el.creation_date} ${el.username} ${el.comment}`;
+      li.appendChild(document.createTextNode(listItem));
+      ul.appendChild(li);
+    });
+  }
 };
 
 export const commentCounter = (comments) => {
@@ -19,7 +21,8 @@ export const commentCounter = (comments) => {
 export const createCommentPopup = async (showId) => {
   const tvShow = await getShow(showId);
   const comments = await getComments(showId);
-  const counter = await commentCounter(comments);
+  let counter = await commentCounter(comments);
+  if (!counter) { counter = 0; }
   const popup = `
   <div id="popup">
     <img class="popupImg" src="${tvShow.image.original}" alt="tvShow image">
