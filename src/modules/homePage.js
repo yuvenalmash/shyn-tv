@@ -15,6 +15,11 @@ const createCard = async (showID) => {
   return card;
 };
 
+export const featuredShowsCounter = (featuredList) => {
+  const counter = featuredList.length;
+  return counter;
+};
+
 export const listShows = async () => {
   const showIDs = [169, 82, 44, 35, 98, 25];
   const likesList = await getLikes();
@@ -29,7 +34,8 @@ export const listShows = async () => {
     }
   });
   const featuredShows = document.querySelector('.featured-counter');
-  featuredShows.innerHTML = `Featured Movies (${showIDs.length})`;
+  const counter = featuredShowsCounter(showIDs);
+  featuredShows.innerHTML = `Featured Movies (${counter})`;
 };
 
 export const addLikes = async (showId) => {
