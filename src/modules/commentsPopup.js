@@ -1,10 +1,9 @@
 import getShow from './tvmazeAPI.js';
 import { getComments } from './involvementAPI.js';
 
-export const listComments = async (showId) => {
-  const data = await getComments(showId);
+export const listComments = (comments) => {
   const ul = document.getElementById('commentsList');
-  data.forEach(async (el) => {
+  comments.forEach(el => {
     const li = document.createElement('li');
     const listItem = `${el.creation_date} ${el.username} ${el.comment}`;
     li.appendChild(document.createTextNode(listItem));
@@ -12,15 +11,15 @@ export const listComments = async (showId) => {
   });
 };
 
-const commentCounter = async (showId) => {
-  const data = await getComments(showId);
-  const counter = data.length;
+export const commentCounter = (comments) => {
+  const counter = comments.length;
   return counter;
 };
 
 export const createCommentPopup = async (showId) => {
   const tvShow = await getShow(showId);
-  const counter = await commentCounter(showId);
+  const comments = await getComments(showId);
+  const counter = await commentCounter(comments);
   const popup = `
   <div id="popup">
     <img class="popupImg" src="${tvShow.image.original}" alt="tvShow image">
@@ -36,5 +35,5 @@ export const createCommentPopup = async (showId) => {
   const parent = document.getElementById('commentPopup');
   parent.innerHTML = popup;
   parent.style.display = 'block';
-  listComments(showId);
+  listComments(comments);
 };

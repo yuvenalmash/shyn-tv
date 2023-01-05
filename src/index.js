@@ -1,14 +1,19 @@
 import './style.css';
 import { listShows, addLikes } from './modules/homePage.js';
 import { createCommentPopup, listComments } from './modules/commentsPopup.js';
-import { postLike, postComment } from './modules/involvementAPI.js';
+import { postLike, postComment, getComments } from './modules/involvementAPI.js';
 
 const handlePostComment = async (showId) => {
-  const userName = document.getElementById('userName').value;
-  const comment = document.getElementById('comment').value;
-  if (userName !== '' && comment !== '') {
-    await postComment(showId, userName, comment);
-    listComments(showId);
+  const userName = document.getElementById('userName');
+  const comment = document.getElementById('comment');
+  if (userName.value !== '' && comment.value !== '') {
+    await postComment(showId, userName.value, comment.value);
+    userName.value = ''
+    comment.value = ''
+    
+    const comments = await getComments(showId);
+    const newComment = comments[comments.length-1]
+    listComments([newComment]);
   }
 };
 
