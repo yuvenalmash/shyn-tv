@@ -60,17 +60,17 @@ nav {
   width: 25%;
 }
 
-.card img {
-  height: 40vh;
-}
-
 img,
 p {
   padding: 5px;
 }
 
+.card img {
+  height: 40vh;
+}
+
 button {
-  background-color:#a8fd16;
+  background-color: #a8fd16;
   box-shadow: 3px 3px;
   padding: 2.5px 10px;
   transition: all 300ms linear;
