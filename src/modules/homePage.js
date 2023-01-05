@@ -28,9 +28,6 @@ export const listShows = async () => {
       parent2.innerHTML = `${showLikes[0].likes} likes`;
     }
   });
-
-  // const cardsCount = new Shows();
-  // cardsCount.setNumber(showIDs.length);
   const featuredShows = document.querySelector('.featured');
   featuredShows.innerHTML = `Featured Movies (${showIDs.length})`;
 };
