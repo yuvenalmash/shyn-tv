@@ -28,7 +28,7 @@ export const listShows = async () => {
       parent2.innerHTML = `${showLikes[0].likes} likes`;
     }
   });
-  const featuredShows = document.querySelector('.featured');
+  const featuredShows = document.querySelector('.featured-counter');
   featuredShows.innerHTML = `Featured Movies (${showIDs.length})`;
 };
 
