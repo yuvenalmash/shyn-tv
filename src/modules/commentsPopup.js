@@ -34,9 +34,9 @@ export const createCommentPopup = async (showId) => {
   parent.style.display = 'flex';
   listComments(showId);
 
-  // const closeBtn = document.querySelector('#close');
+  const closeBtn = document.querySelector('#close');
 
-  // closeBtn.addEventListener('click', () => {
-  //   parent.style.display = 'none';
-  // });
+  closeBtn.addEventListener('click', () => {
+    parent.style.display = 'none';
+  });
 };
