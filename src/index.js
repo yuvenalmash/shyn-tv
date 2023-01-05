@@ -8,11 +8,11 @@ const handlePostComment = async (showId) => {
   const comment = document.getElementById('comment');
   if (userName.value !== '' && comment.value !== '') {
     await postComment(showId, userName.value, comment.value);
-    userName.value = ''
-    comment.value = ''
-    
+    userName.value = '';
+    comment.value = '';
+
     const comments = await getComments(showId);
-    const newComment = comments[comments.length-1]
+    const newComment = comments[comments.length - 1];
     listComments([newComment]);
   }
 };
