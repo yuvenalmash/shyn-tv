@@ -3,7 +3,7 @@ import { getComments } from './involvementAPI.js';
 
 export const listComments = (comments) => {
   const ul = document.getElementById('commentsList');
-  comments.forEach(el => {
+  comments.forEach((el) => {
     const li = document.createElement('li');
     const listItem = `${el.creation_date} ${el.username} ${el.comment}`;
     li.appendChild(document.createTextNode(listItem));
