@@ -6,10 +6,11 @@ const createCard = async (showID) => {
   const card = `
     <div class="card" id ="${show.id}">
       <img src="${show.image.medium}" alt="${show.name}">
+      <section>
       <p>${show.name}</p>
-      <div><a href="#" onclick="handleAddLike(${showID})"><i class="fa-solid fa-heart fa-lg"></a></i> <p id="${showID}likes"></p></div>
+      <div><a href="#" onclick="handleAddLike(${showID})"><i class="fa-solid fa-heart"></a></i> <p id="${showID}likes"></p></div>
+      </section>
       <button class="btn" onclick="createCommentPopup(${showID})">Comments</button>
-      <button class="btn">Reservations</button>
     </div>
   `;
   return card;
@@ -21,7 +22,7 @@ export const featuredShowsCounter = (featuredList) => {
 };
 
 export const listShows = async () => {
-  const showIDs = [169, 82, 44, 35, 98, 25];
+  const showIDs = [172, 618, 66, 143, 35, 98, 25,2,4,13, 61,69];
   const likesList = await getLikes();
   const parent = document.getElementById('cards');
   showIDs.forEach(async (showId) => {
@@ -35,7 +36,7 @@ export const listShows = async () => {
   });
   const featuredShows = document.querySelector('.featured-counter');
   const counter = featuredShowsCounter(showIDs);
-  featuredShows.innerHTML = `Featured Movies (${counter})`;
+  featuredShows.innerHTML = `<u>Featured Shows (${counter})</u>`;
 };
 
 export const addLikes = async (showId) => {
