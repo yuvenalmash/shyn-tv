@@ -40,7 +40,6 @@ export const createCommentPopup = async (showId) => {
   </div>`;
   const parent = document.getElementById('commentPopup');
   parent.innerHTML = popup;
-  
   parent.style.display = 'flex';
   listComments(comments);
 
