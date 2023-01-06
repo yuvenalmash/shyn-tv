@@ -3,13 +3,13 @@
   margin: 0;
   box-sizing: border-box;
   font-family: monospace;
-  font-size: large;
 }
 
 body {
-  background-color: rgb(0, 0, 0);
+  background-color: #000;
   color: #f5f5f5;
   padding: 0 12px;
+  position: relative;
 }
 
 ul.header-items {
@@ -22,7 +22,8 @@ ul.header-items {
 
 li {
   list-style: none;
-  font-size: 15px;
+  font-size: 20px;
+  font-weight: 600;
 }
 
 .logo-div {
@@ -34,17 +35,14 @@ li {
 }
 
 nav {
-  border-bottom: 2px solid #66fdfb;
-  box-shadow: 0 0 5px #66fdfb;
-}
-
-.featured-counter {
-  text-decoration: underline;
+  border-bottom: 2px solid #74f0ed;
+  box-shadow: 0 5px 5px #a8fd16;
+  background: url('./assets/pattern_bg.png') repeat rgba(0, 0, 0, 0.836);
 }
 
 .cards {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: auto auto auto;
   justify-content: center;
   align-items: center;
   gap: 5rem;
@@ -55,18 +53,37 @@ nav {
   display: flex;
   flex-direction: column;
   align-items: center;
+  font-size: 20px;
   border: 2px solid #74f0ed;
-  box-shadow: 0 0 5px #66fdfb;
-  width: 25%;
+  box-shadow: 0 5px 10px #66fdfb;
+  height: 370px;
+  gap: 4px;
+  background: url('./assets/pattern_bg.png') repeat rgba(39, 39, 39, 0.644);
 }
 
-img,
+.card section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 250px;
+}
+
+.card div {
+  display: flex;
+  gap: 3px;
+  align-items: baseline;
+  font-size: 16px;
+  margin-left: 150px;
+}
+
+/* img,
 p {
   padding: 5px;
-}
+} */
 
 .card img {
-  height: 40vh;
+  height: 270px;
+  width: 200px;
 }
 
 button {
@@ -78,10 +95,15 @@ button {
   margin: 5px;
 }
 
+button:hover {
+  background-color: #ea445a;
+}
+
 footer {
   border-top: 2px solid #74f0ed;
   box-shadow: 0 0 5px #66fdfb;
   margin-top: 9rem;
+  background: url('./assets/pattern_bg.png') repeat #000;
 }
 
 footer p {
@@ -90,22 +112,23 @@ footer p {
 
 #commentPopup {
   display: none;
-  position: fixed;
+  position: absolute;
+  overflow-y: scroll;
   justify-content: center;
-  backdrop-filter: blur(10px);
-  width: 100vw;
-  height: 100vh;
-  padding: 10px;
-  margin-top: -60rem;
+  width: 90%;
+  margin: 30px 50px;
+
+  /* margin-top: -20rem; */
 }
 
 #popup {
+  position: fixed;
   max-height: 100%;
   max-width: 90%;
   overflow-y: scroll;
-  background-color: #f4f4f4;
+  backdrop-filter: blur(30px);
   width: 85%;
-  padding-top: 10px;
+  padding: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;

@@ -3,7 +3,7 @@ import { getComments } from './involvementAPI.js';
 
 export const listComments = (comments) => {
   const ul = document.getElementById('commentsList');
-  if (comments.error.status !== 400) {
+  if (comments.error === undefined) {
     comments.forEach((el) => {
       const li = document.createElement('li');
       const listItem = `${el.creation_date} ${el.username} ${el.comment}`;
@@ -28,7 +28,10 @@ export const createCommentPopup = async (showId) => {
     <img class="popupImg" src="${tvShow.image.original}" alt="tvShow image">
     <i class="fa fa-times fa-2x" aria-hidden="true" id="close"></i>
     <h2>${tvShow.name}</h2>
-    <p>${tvShow.genres}</p>
+    <p>Genres: ${tvShow.genres}</p>
+    <p>Status: ${tvShow.status}</p>
+    <p>Network: ${tvShow.network.name}</p>
+    <p>Summary: ${tvShow.summary}</p>
     <h3>Comments (${counter})</h3>
     <ul id="commentsList"></ul>
     <h3>Add a comment<h3>
