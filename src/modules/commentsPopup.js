@@ -1,5 +1,6 @@
 import getShow from './tvmazeAPI.js';
 import { getComments } from './involvementAPI.js';
+import { commentCounter } from './commentsCounter.js';
 
 export const listComments = (comments) => {
   const ul = document.getElementById('commentsList');
@@ -12,11 +13,6 @@ export const listComments = (comments) => {
       ul.appendChild(li);
     });
   }
-};
-
-export const commentCounter = () => {
-  const counter = document.querySelectorAll(".commentItem").length
-  return counter;
 };
 
 export const createCommentPopup = async (showId) => {
@@ -44,7 +40,7 @@ export const createCommentPopup = async (showId) => {
   parent.innerHTML = popup;
   parent.style.display = 'flex';
   listComments(comments);
-  const count = commentCounter();
+  const count = commentCounter('.commentItem');
   const counter = document.getElementById('commentCount');
   counter.innerHTML = `Comments (${count})`;
 
