@@ -30,11 +30,11 @@ export const createCommentPopup = async (showId) => {
     <h3 id="commentCount"></h3>
     <ul id="commentsList"></ul>
     <h3>Add a comment<h3>
-    <form action="">
+    <div id="addCommentForm">
       <input id="userName" type="text" placeholder="Your name">
       <input id="comment" type="text" placeholder="Your insights">
       <button onclick="handlePostComment(${showId})">Comment</button>
-    </form>
+    </div>
   </div>`;
   const parent = document.getElementById('commentPopup');
   parent.innerHTML = popup;

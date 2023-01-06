@@ -24,7 +24,7 @@ export const getLikes = async () => {
 
 // comments
 export const postComment = async (showId, userName, comment) => {
-  const response = await fetch(`${baseURL}apps/${appId}comments`, {
+  await fetch(`${baseURL}apps/${appId}comments`, {
     method: 'POST',
     body: JSON.stringify({
       item_id: `${showId}`,
@@ -35,8 +35,6 @@ export const postComment = async (showId, userName, comment) => {
       'Content-type': 'application/json; charset=UTF-8',
     },
   });
-  const responseData = await response.json()
-  return responseData
 };
 
 export const getComments = async (showId) => {

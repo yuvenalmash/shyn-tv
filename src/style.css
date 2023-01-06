@@ -152,7 +152,7 @@ input#comment {
   margin-top: 5px;
 }
 
-form {
+#addCommentForm {
   display: flex;
   flex-direction: column;
   width: fit-content;
