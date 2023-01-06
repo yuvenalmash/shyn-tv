@@ -31,7 +31,7 @@
 - [❓ FAQ](#faq)
 - [📝 License](#license)
 
-# 📖 JavaScript-Capstone <a name="about-project"></a>
+# 📖 API-based-webapp <a name="about-project"></a>
 
 **API-based-webapp** is a Show/Movies web application. It majorly displays different Shows and movies from the TVmaze API. The homepage shows a list of Shows/Movies you can like. The popup window shows more data on the Show/Movie selected and the user can comment on it too.<br>
 The project has two user interfaces:
@@ -73,6 +73,7 @@ The project has two user interfaces:
 > Below are the key features of the website:
 
 - **Used TVmaze API for Show/Movies details and pictures**
+- **Used Involvement API for likes and comments interaction**
 - **Used webpack**
 - **Add counter tests with jest**
 
