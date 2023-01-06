@@ -43,7 +43,7 @@ The project has two user interfaces:
     - Popup window : The interface displays the following;
         - Image of the selected Show/Movie.
         - Details and plot summary of the Show/Movie selected.
-        - Comment Section. The user comments are displayed on the page.
+        - Comment Section. The user comments are displayed on the page. This was also gotten from the[Involvement Api](https://www.notion.so/Involvement-API-869e60b5ad104603aa6db59e08150270)
 
 ## 🛠 Built With <a name="built-with"></a>
 
