@@ -1,6 +1,6 @@
 import './style.css';
 import { listShows, addLikes } from './modules/homePage.js';
-import { createCommentPopup, listComments } from './modules/commentsPopup.js';
+import { createCommentPopup, listComments, commentCounter } from './modules/commentsPopup.js';
 import { postLike, postComment, getComments } from './modules/involvementAPI.js';
 
 const handlePostComment = async (showId) => {
@@ -14,8 +14,9 @@ const handlePostComment = async (showId) => {
     const comments = await getComments(showId);
     const newComment = comments[comments.length - 1];
     listComments([newComment]);
+    const count = commentCounter();
     const counter = document.getElementById('commentCount');
-    counter.innerHTML = `Comments (${comments.length})`;
+    counter.innerHTML = `Comments (${count})`;
   }
 };
 
