@@ -32,7 +32,7 @@ export const createCommentPopup = async (showId) => {
     <p>Status: ${tvShow.status}</p>
     <p>Network: ${tvShow.network.name}</p>
     <p>Summary: ${tvShow.summary}</p>
-    <h3>Comments (${counter})</h3>
+    <h3 id="commentCount">Comments (${counter})</h3>
     <ul id="commentsList"></ul>
     <h3>Add a comment<h3>
     <form action="">
