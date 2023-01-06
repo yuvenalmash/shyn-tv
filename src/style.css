@@ -41,8 +41,8 @@ nav {
 }
 
 .cards {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: auto auto auto;
   justify-content: center;
   align-items: center;
   gap: 5rem;
@@ -56,7 +56,6 @@ nav {
   font-size: 20px;
   border: 2px solid #74f0ed;
   box-shadow: 0 5px 10px #66fdfb;
-  max-width: 20%;
   height: 370px;
   gap: 4px;
   background: url('./assets/pattern_bg.png') repeat rgba(39, 39, 39, 0.644);
