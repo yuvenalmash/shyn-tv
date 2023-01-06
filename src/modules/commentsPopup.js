@@ -1,13 +1,13 @@
 import getShow from './tvmazeAPI.js';
 import { getComments } from './involvementAPI.js';
-import { commentCounter } from './commentsCounter.js';
+import commentCounter from './commentsCounter.js';
 
 export const listComments = (comments) => {
   const ul = document.getElementById('commentsList');
   if (comments.error === undefined) {
     comments.forEach((el) => {
       const li = document.createElement('li');
-      li.classList.add('commentItem')
+      li.classList.add('commentItem');
       const listItem = `${el.creation_date} ${el.username} ${el.comment}`;
       li.appendChild(document.createTextNode(listItem));
       ul.appendChild(li);
