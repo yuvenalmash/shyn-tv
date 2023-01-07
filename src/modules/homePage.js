@@ -32,7 +32,10 @@ export const listShows = async () => {
   });
   const featuredShows = document.querySelector('.featured-counter');
   setTimeout(() => {
-    const counter = featuredShowsCounter('card');
+    let counter = featuredShowsCounter('card');
+    if (counter === 0) {
+      counter = showIDs.length;
+    }
     featuredShows.innerHTML = `<u>Featured Shows (${counter})</u>`;
   }, 500);
 };
