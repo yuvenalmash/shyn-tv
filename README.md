@@ -81,13 +81,14 @@ The project has two user interfaces:
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- [Live Demo Link](https://)
+- [Live Demo Link](https://yuvenalmash.github.io/API-based-webapp/dist/
+)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 🚀 Video Representation <a name="video-rep"></a>
 
-- [Video Representation Link](https://)
+- [Video Representation Link](https://drive.google.com/file/d/1OIBT3r2wCdjgWJ58tcUXIdAkCMSnopYg/view?usp=sharing)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -130,7 +131,7 @@ To get a local copy up and running follow these simple example steps.
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-> CSS for styling will be added.
+> Implement full schedule and search tab functionalities.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
