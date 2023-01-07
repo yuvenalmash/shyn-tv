@@ -1,5 +1,6 @@
 import { getLikes } from './involvementAPI.js';
 import getShow from './tvmazeAPI.js';
+import featuredShowsCounter from './showsCounter.js';
 
 const createCard = async (showID) => {
   const show = await getShow(showID);
@@ -16,11 +17,6 @@ const createCard = async (showID) => {
   return card;
 };
 
-export const featuredShowsCounter = (featuredList) => {
-  const counter = featuredList.length;
-  return counter;
-};
-
 export const listShows = async () => {
   const showIDs = [172, 618, 66, 143, 35, 98, 25, 2, 4, 13, 61, 69];
   const likesList = await getLikes();
@@ -35,8 +31,10 @@ export const listShows = async () => {
     }
   });
   const featuredShows = document.querySelector('.featured-counter');
-  const counter = featuredShowsCounter(showIDs);
-  featuredShows.innerHTML = `<u>Featured Shows (${counter})</u>`;
+  setTimeout(() => {
+    const counter = featuredShowsCounter('card');
+    featuredShows.innerHTML = `<u>Featured Shows (${counter})</u>`;
+  }, 500);
 };
 
 export const addLikes = async (showId) => {
