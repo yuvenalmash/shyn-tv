@@ -1,0 +1,159 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: monospace;
+}
+
+body {
+  background-color: #000;
+  color: #f5f5f5;
+  padding: 0 12px;
+  position: relative;
+}
+
+ul.header-items {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 12px 3rem;
+  align-items: baseline;
+  color: #a8fd16;
+}
+
+li {
+  list-style: none;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.logo-div {
+  display: flex;
+  flex-direction: column;
+  font-size: 18px;
+  align-items: center;
+  color: #ea445a;
+}
+
+nav {
+  border-bottom: 2px solid #74f0ed;
+  box-shadow: 0 5px 5px #a8fd16;
+  background: url('./assets/pattern_bg.png') repeat rgba(0, 0, 0, 0.836);
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  justify-content: center;
+  align-items: center;
+  gap: 5rem;
+  margin: 3rem;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 20px;
+  border: 2px solid #74f0ed;
+  box-shadow: 0 5px 10px #66fdfb;
+  height: 370px;
+  gap: 4px;
+  background: url('./assets/pattern_bg.png') repeat rgba(39, 39, 39, 0.644);
+}
+
+.card section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 250px;
+}
+
+.card div {
+  display: flex;
+  gap: 3px;
+  align-items: baseline;
+  font-size: 16px;
+  margin-left: 150px;
+}
+
+/* img,
+p {
+  padding: 5px;
+} */
+
+.card img {
+  height: 270px;
+  width: 200px;
+}
+
+button {
+  background-color: #a8fd16;
+  box-shadow: 3px 3px;
+  padding: 2.5px 10px;
+  transition: all 300ms linear;
+  width: fit-content;
+  margin: 5px;
+}
+
+button:hover {
+  background-color: #ea445a;
+}
+
+footer {
+  border-top: 2px solid #74f0ed;
+  box-shadow: 0 0 5px #66fdfb;
+  margin-top: 9rem;
+  background: url('./assets/pattern_bg.png') repeat #000;
+}
+
+footer p {
+  padding: 2rem;
+}
+
+#commentPopup {
+  display: none;
+  position: absolute;
+  overflow-y: scroll;
+  justify-content: center;
+  width: 90%;
+  margin: 30px 50px;
+
+  /* margin-top: -20rem; */
+}
+
+#popup {
+  position: fixed;
+  max-height: 100%;
+  max-width: 90%;
+  overflow-y: scroll;
+  backdrop-filter: blur(30px);
+  width: 85%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.popupImg {
+  height: 60vh;
+}
+
+#close {
+  position: absolute;
+  padding-left: 75%;
+}
+
+.hide {
+  display: none;
+}
+
+input#comment {
+  padding-bottom: 2rem;
+  margin-top: 5px;
+}
+
+#addCommentForm {
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+}
