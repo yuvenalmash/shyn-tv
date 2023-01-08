@@ -1,4 +1,4 @@
-import getShow from './tvmazeAPI.js';
+import { getShow } from './tvmazeAPI.js';
 import { getComments } from './involvementAPI.js';
 import commentCounter from './commentsCounter.js';
 
