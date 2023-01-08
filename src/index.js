@@ -30,7 +30,6 @@ const handleAddLike = async (showId) => {
 listShows();
 const logo = document.getElementById('logo');
 const featuredPageBtn = document.getElementById('featuredPageBtn');
-const schedulePageBtn = document.getElementById('schedulePageBtn');
 const searchBtn = document.getElementById('searchBtn');
 
 logo.addEventListener('click', () => {
@@ -39,10 +38,6 @@ logo.addEventListener('click', () => {
 
 featuredPageBtn.addEventListener('click', () => {
   listShows();
-});
-
-schedulePageBtn.addEventListener('click', () => {
-  console.log('schedule btn clicked');
 });
 
 searchBtn.addEventListener('click', () => {
