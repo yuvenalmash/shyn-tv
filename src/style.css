@@ -184,9 +184,11 @@ footer p {
   flex-direction: column;
   gap: 12px;
 }
+
 #popupDetails h1 {
   font-size: 20px;
 }
+
 #popupDetails p {
   font-size: 15px;
 }
