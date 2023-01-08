@@ -40,6 +40,14 @@ body {
   font-weight: 600;
 }
 
+.header-items input {
+  border: 2px dotted #a8fd16;
+  padding: 0px 5px;
+  background-color: #000;
+  color: #ea445a;
+  font-weight: 700;
+}
+
 .logo-div {
   display: flex;
   flex-direction: column;
