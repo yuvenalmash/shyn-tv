@@ -41,9 +41,9 @@ featuredPageBtn.addEventListener('click', () => {
   listShows();
 });
 
-schedulePageBtn.addEventListener('click', () =>{
+schedulePageBtn.addEventListener('click', () => {
   console.log('schedule btn clicked');
-})
+});
 
 searchBtn.addEventListener('click', () => {
   const query = document.getElementById('searchInput');
