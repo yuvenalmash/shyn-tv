@@ -12,7 +12,6 @@ export const listSearchedShows = async (query) => {
   container.innerHTML = '';
   shows.forEach(async (element) => {
     const card = await createCard(element.show.id);
-    // container.appendChild(card)
     container.innerHTML += card;
   });
 };
