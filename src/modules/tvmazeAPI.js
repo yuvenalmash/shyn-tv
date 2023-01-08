@@ -7,7 +7,7 @@ export const getShow = async (showID) => {
 };
 
 export const searchShow = async (query) => {
-  const response = await fetch(`${baseURL}/search/shows?q=${query}`)
-  const responseData = await response.json()
-  return responseData
-}
+  const response = await fetch(`${baseURL}/search/shows?q=${query}`);
+  const responseData = await response.json();
+  return responseData;
+};

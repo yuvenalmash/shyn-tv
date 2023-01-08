@@ -28,25 +28,29 @@ const handleAddLike = async (showId) => {
 };
 
 listShows();
-const logo = document.getElementById("logo")
-const featuredPageBtn = document.getElementById("featuredPageBtn")
-const schedulePageBtn = document.getElementById("schedulePageBtn")
-const searchBtn = document.getElementById("searchBtn")
+const logo = document.getElementById('logo');
+const featuredPageBtn = document.getElementById('featuredPageBtn');
+const schedulePageBtn = document.getElementById('schedulePageBtn');
+const searchBtn = document.getElementById('searchBtn');
 
-logo.addEventListener('click',()=>{
-  listShows()
+logo.addEventListener('click', () => {
+  listShows();
+});
+
+featuredPageBtn.addEventListener('click', () => {
+  listShows();
+});
+
+schedulePageBtn.addEventListener('click', () =>{
+  console.log('schedule btn clicked');
 })
 
-featuredPageBtn.addEventListener('click',()=>{
-  listShows()
-})
-
-searchBtn.addEventListener('click',()=>{
-  const query = document.getElementById("searchInput")
-  searchedShows(query.value)
-  listSearchedShows(query.value)
-  query.value = ""
-})
+searchBtn.addEventListener('click', () => {
+  const query = document.getElementById('searchInput');
+  searchedShows(query.value);
+  listSearchedShows(query.value);
+  query.value = '';
+});
 
 window.createCommentPopup = createCommentPopup;
 window.handlePostComment = handlePostComment;

@@ -21,7 +21,7 @@ export const listShows = async () => {
   const showIDs = [172, 618, 66, 143, 35, 98, 25, 2, 4, 13, 61, 69];
   const likesList = await getLikes();
   const parent = document.getElementById('cards');
-  parent.innerHTML = ""
+  parent.innerHTML = '';
   showIDs.forEach(async (showId) => {
     const card = await createCard(showId);
     parent.innerHTML += card;
