@@ -1,7 +1,6 @@
 const baseURL = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/';
 
 const appId = 'qS1d1JsU58cIKClC8bN0/';
-// const appId = 'm4yoGSf3f0o5jjuL4DT4/';
 
 // Likes
 export const postLike = async (showId) => {

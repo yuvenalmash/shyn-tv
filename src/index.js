@@ -3,6 +3,7 @@ import { listShows, addLikes } from './modules/homePage.js';
 import { createCommentPopup, listComments } from './modules/commentsPopup.js';
 import { postLike, postComment, getComments } from './modules/involvementAPI.js';
 import commentCounter from './modules/commentsCounter.js';
+import { searchedShows, listSearchedShows } from './modules/searchPage.js';
 
 const handlePostComment = async (showId) => {
   const userName = document.getElementById('userName');
@@ -27,6 +28,30 @@ const handleAddLike = async (showId) => {
 };
 
 listShows();
+const logo = document.getElementById('logo');
+const featuredPageBtn = document.getElementById('featuredPageBtn');
+const schedulePageBtn = document.getElementById('schedulePageBtn');
+const searchBtn = document.getElementById('searchBtn');
+
+logo.addEventListener('click', () => {
+  listShows();
+});
+
+featuredPageBtn.addEventListener('click', () => {
+  listShows();
+});
+
+schedulePageBtn.addEventListener('click', () => {
+  console.log('schedule btn clicked');
+});
+
+searchBtn.addEventListener('click', () => {
+  const query = document.getElementById('searchInput');
+  searchedShows(query.value);
+  listSearchedShows(query.value);
+  query.value = '';
+});
+
 window.createCommentPopup = createCommentPopup;
 window.handlePostComment = handlePostComment;
 window.handleAddLike = handleAddLike;

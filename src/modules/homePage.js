@@ -1,8 +1,8 @@
 import { getLikes } from './involvementAPI.js';
-import getShow from './tvmazeAPI.js';
+import { getShow } from './tvmazeAPI.js';
 import featuredShowsCounter from './showsCounter.js';
 
-const createCard = async (showID) => {
+export const createCard = async (showID) => {
   const show = await getShow(showID);
   const card = `
     <div class="card" id ="${show.id}">
@@ -21,6 +21,7 @@ export const listShows = async () => {
   const showIDs = [172, 618, 66, 143, 35, 98, 25, 2, 4, 13, 61, 69];
   const likesList = await getLikes();
   const parent = document.getElementById('cards');
+  parent.innerHTML = '';
   showIDs.forEach(async (showId) => {
     const card = await createCard(showId);
     parent.innerHTML += card;
