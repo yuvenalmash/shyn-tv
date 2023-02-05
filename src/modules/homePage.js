@@ -18,7 +18,7 @@ export const createCard = async (showID) => {
 };
 
 export const listShows = async () => {
-  const showIDs = [172, 618, 66, 143, 35, 98, 25, 2, 4, 13, 61, 69];
+  const showIDs = [172, 618, 66, 98, 2, 4, 13, 61, 69];
   const likesList = await getLikes();
   const parent = document.getElementById('cards');
   parent.innerHTML = '';
