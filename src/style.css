@@ -79,8 +79,10 @@ nav {
 }
 
 .cards {
-  display: grid;
-  grid-template-columns: auto auto auto;
+  display: flex;
+  flex-wrap: wrap;
+
+  /* grid-template-columns: auto auto auto; */
   justify-content: center;
   align-items: center;
   gap: 5rem;
@@ -208,4 +210,11 @@ input#comment {
   display: flex;
   flex-direction: column;
   width: fit-content;
+}
+
+@media screen and (max-width: 730px) {
+  .header-items {
+    display: flex;
+    flex-direction: column;
+  }
 }
