@@ -81,6 +81,7 @@ nav {
 .cards {
   display: flex;
   flex-wrap: wrap;
+
   /* grid-template-columns: auto auto auto; */
   justify-content: center;
   align-items: center;
